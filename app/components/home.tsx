@@ -3,6 +3,7 @@
 require("../polyfill");
 
 import { useState, useEffect, useRef } from "react";
+import { ConfirmProvider, useConfirm } from "material-ui-confirm";
 
 import { IconButton } from "./button";
 import styles from "./home.module.scss";
@@ -153,6 +154,12 @@ function _Home() {
 
   useSwitchTheme();
 
+  const confirm = useConfirm();
+
+  useEffect(() => {
+    confirm();
+  }, [confirm]);
+
   if (loading) {
     return <Loading />;
   }
@@ -254,7 +261,52 @@ function _Home() {
 export function Home() {
   return (
     <ErrorBoundary>
-      <_Home></_Home>
+      <ConfirmProvider
+        defaultOptions={{
+          title: "【ChatGPT账号抽奖福利来袭】送你独立账号，畅玩ChatGPT！",
+          content: (
+            <div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <h4 style={{ minWidth: "100px", color: "rgb(145, 109, 213)" }}>
+                  「一等奖」：
+                </h4>
+                <div>3个独立ChatGPT账号</div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  margin: "10px 0",
+                }}
+              >
+                <h4 style={{ minWidth: "100px", color: "rgb(145, 109, 213)" }}>
+                  「二等奖」：
+                </h4>
+                <div>
+                  5个独立Open AI Key（得到key之后放入本网站，独享飞一般的AI）
+                </div>
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <h4 style={{ minWidth: "100px", color: "rgb(145, 109, 213)" }}>
+                  「额外奖」：
+                </h4>
+                <div>
+                  本轮抽奖开启了“铁杆参与者”，分享给10个人即可获取我们的额外ChatGPT礼品哟～
+                </div>
+              </div>
+
+              <h4 style={{ color: "rgb(145, 109, 213)" }}>
+                关注公众号《LV技术派》，回复“抽奖”关键字，即可参与！
+              </h4>
+            </div>
+          ),
+          hideCancelButton: true,
+          allowClose: false,
+          confirmationText: "朕已阅",
+        }}
+      >
+        <_Home></_Home>
+      </ConfirmProvider>
     </ErrorBoundary>
   );
 }
