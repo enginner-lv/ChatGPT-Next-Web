@@ -263,16 +263,30 @@ export function Home() {
     <ErrorBoundary>
       <ConfirmProvider
         defaultOptions={{
-          title: "【ChatGPT账号抽奖福利来袭】送你独立账号，畅玩ChatGPT！",
+          title: "【ChatGPT账号抽奖福利】本轮抽奖已结束",
           content: (
             <div>
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <h4 style={{ minWidth: "100px", color: "rgb(145, 109, 213)" }}>
-                  「一等奖」：
-                </h4>
-                <div>3个独立ChatGPT账号</div>
-              </div>
               <div
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  flexDirection: "column",
+                }}
+              >
+                <h4
+                  style={{
+                    minWidth: "100px",
+                    color: "rgb(145, 109, 213)",
+                  }}
+                >
+                  「如何白嫖使用ChatGPT」：
+                </h4>
+                <div style={{ margin: "20px 0" }}>
+                  1、关注公众号「 LV技术派 」
+                </div>
+                <div>2、回复关键字「 lv 」</div>
+              </div>
+              {/* <div
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -293,10 +307,10 @@ export function Home() {
                 <div>
                   本轮抽奖开启了“铁杆参与者”，分享给10个人即可获取我们的额外ChatGPT礼品哟～
                 </div>
-              </div>
+              </div> */}
 
-              <h4 style={{ color: "rgb(145, 109, 213)" }}>
-                关注公众号《LV技术派》，回复“抽奖”关键字，即可参与！
+              <h4 style={{ color: "rgb(145, 109, 213)", marginTop: "40px" }}>
+                关注公众号《LV技术派》，不错过最新车次，更多AI奖品等你来拿！
               </h4>
             </div>
           ),
