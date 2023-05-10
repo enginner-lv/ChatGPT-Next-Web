@@ -213,11 +213,11 @@ function _Home() {
                 shadow
               />
             </div>
-            <div className={styles["sidebar-action"]}>
+            {/* <div className={styles["sidebar-action"]}>
               <a href={REPO_URL} target="_blank">
                 <IconButton icon={<GithubIcon />} shadow />
               </a>
-            </div>
+            </div> */}
           </div>
           <div>
             <IconButton
@@ -271,6 +271,37 @@ export function Home() {
                   display: "flex",
                   alignItems: "flex-start",
                   flexDirection: "column",
+                  marginBottom: "20px",
+                }}
+              >
+                <h4
+                  style={{
+                    minWidth: "100px",
+                    color: "rgb(145, 109, 213)",
+                  }}
+                >
+                  「进入粉丝福利专属群」：
+                </h4>
+                <div style={{ marginTop: "20px" }}>
+                  1、群内会不定期抽奖发福利、如ChatGPT账号和 Open Ai Key等。
+                </div>
+                <div style={{ margin: "20px 0" }}>
+                  2、分享ChatGPT最新咨询、实用教程、赚钱案例。
+                </div>
+                <div>3、教你开发AI应用，小白也能学会。</div>
+
+                <img
+                  style={{ marginTop: "20px" }}
+                  width="30%"
+                  src="/chat-group.png"
+                />
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  flexDirection: "column",
                 }}
               >
                 <h4
@@ -286,6 +317,7 @@ export function Home() {
                 </div>
                 <div>2、回复关键字「 lv 」</div>
               </div>
+
               {/* <div
                 style={{
                   display: "flex",
