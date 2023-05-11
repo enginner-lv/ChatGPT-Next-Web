@@ -315,7 +315,9 @@ export function Home() {
                 <div style={{ margin: "20px 0" }}>
                   1、关注公众号「 LV技术派 」
                 </div>
-                <div>2、回复关键字「 lv 」</div>
+                <div>
+                  2、回复关键字「 lv 」，加入粉丝群，密码将会不定期在群更新
+                </div>
               </div>
 
               {/* <div
