@@ -3,8 +3,14 @@ import { SubmitKey } from "../store/app";
 const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
-    Unauthorized:
-      "现在是未授权状态，请关注公众号“LV技术派”获取密码，点击左下角设置按钮输入访问密码。(PS: 公众号有教程手把手教你如何搭建本网站)",
+    Unauthorized: `
+    由于使用人数多，密码已更新。
+      
+    请关注公众号「LV技术派」回复「lv」重新获取访问密码。
+      
+    点击左下角设置按钮输入访问密码。
+      
+    (PS: 公众号有教程手把手教你如何搭建本网站)`,
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 条对话`,
