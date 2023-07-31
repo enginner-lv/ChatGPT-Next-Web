@@ -263,7 +263,11 @@ export function Home() {
     <ErrorBoundary>
       <ConfirmProvider
         defaultOptions={{
-          title: "【ChatGPT账号抽奖福利】本轮抽奖已结束",
+          title: (
+            <div style={{ color: "rgb(199, 34, 39)" }}>
+              【本应用对接了社群2号车产品的API，提供正规稳定的Azure OpenAI服务】
+            </div>
+          ),
           content: (
             <div>
               <div
@@ -309,8 +313,14 @@ export function Home() {
                     color: "rgb(145, 109, 213)",
                   }}
                 >
-                  「进入粉丝福利专属群」：
+                  「进入AI应用大爆炸社群」：
                 </h4>
+                <div style={{ marginTop: "20px" }}>
+                  1、组队打造AI自媒体矩阵，一起赚钱。
+                </div>
+                <div style={{ margin: "20px 0" }}>
+                  2、组队开发AI应用，一起赚钱。
+                </div>
                 <h4
                   style={{
                     minWidth: "100px",
@@ -319,13 +329,6 @@ export function Home() {
                 >
                   进入公众号，回复「进群」即可。
                 </h4>
-                <div style={{ marginTop: "20px" }}>
-                  1、群内会不定期抽奖发福利、如ChatGPT账号和 Open Ai Key等。
-                </div>
-                <div style={{ margin: "20px 0" }}>
-                  2、分享ChatGPT最新咨询、实用教程、赚钱案例。
-                </div>
-                <div>3、教你开发AI应用，小白也能学会。</div>
               </div>
 
               {/* <div
