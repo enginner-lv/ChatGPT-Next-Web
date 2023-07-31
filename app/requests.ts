@@ -151,6 +151,7 @@ export async function requestChatStream(
       body: JSON.stringify(req),
       signal: controller.signal,
     });
+
     clearTimeout(reqTimeoutId);
 
     let responseText = "";
@@ -170,6 +171,8 @@ export async function requestChatStream(
         // handle time out, will stop if no response in 10 secs
         const resTimeoutId = setTimeout(() => finish(), TIME_OUT_MS);
         const content = await reader?.read();
+        console.log("content", content);
+
         clearTimeout(resTimeoutId);
         const text = decoder.decode(content?.value, { stream: true });
         responseText += text;

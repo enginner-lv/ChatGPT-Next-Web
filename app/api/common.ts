@@ -11,12 +11,14 @@ export async function requestOpenai(req: NextRequest) {
 
   console.log("[Proxy] ", openaiPath);
 
-  return fetch(`${PROTOCOL}://${BASE_URL}/${openaiPath}`, {
+  // return fetch(`https://ai.xmn-lv.cn/api/azure`, {
+  return fetch(`https://creatorai.xmn-lv.cn/api/chat`, {
+    // return fetch(`http://localhost:3001/api/chat`, {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${apiKey}`,
     },
-    method: req.method,
+    method: "POST",
     body: req.body,
   });
 }
