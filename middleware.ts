@@ -17,7 +17,7 @@ export function middleware(req: NextRequest) {
   console.log("[Auth] got access code:", accessCode);
   console.log("[Auth] hashed access code:", hashedCode);
 
-  if (serverConfig.needCode && !serverConfig.codes.has(hashedCode) && !token) {
+  if (serverConfig.needCode && !serverConfig.codes.has(hashedCode)) {
     return NextResponse.json(
       {
         error: true,
@@ -33,20 +33,20 @@ export function middleware(req: NextRequest) {
   // inject api key
   if (!token) {
     const apiKey = serverConfig.apiKey;
-    if (apiKey) {
-      console.log("[Auth] set system token");
-      req.headers.set("token", apiKey);
-    } else {
-      return NextResponse.json(
-        {
-          error: true,
-          msg: "Empty Api Key",
-        },
-        {
-          status: 401,
-        },
-      );
-    }
+    // if (apiKey) {
+    //   console.log("[Auth] set system token");
+    //   req.headers.set("token", apiKey);
+    // } else {
+    return NextResponse.json(
+      {
+        error: true,
+        msg: "Empty Api Key",
+      },
+      {
+        status: 401,
+      },
+    );
+    // }
   } else {
     console.log("[Auth] set user token");
   }

@@ -12,8 +12,8 @@ export async function requestOpenai(req: NextRequest) {
   console.log("[Proxy] ", openaiPath);
 
   // return fetch(`https://ai.xmn-lv.cn/api/azure`, {
-  return fetch(`https://creatorai.xmn-lv.cn/api/chat`, {
-    // return fetch(`http://localhost:3001/api/chat`, {
+  // return fetch(`https://creatorai.xmn-lv.cn/api/chat`, {
+  return fetch(`/api/chat-stream`, {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${apiKey}`,
