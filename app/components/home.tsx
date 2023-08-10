@@ -265,7 +265,7 @@ export function Home() {
         defaultOptions={{
           title: (
             <div style={{ color: "rgb(199, 34, 39)" }}>
-              【本应用对接了社群2号车产品的API，提供正规稳定的Azure OpenAI服务】
+              【应用迁移通知！！！】
             </div>
           ),
           content: (
@@ -278,35 +278,62 @@ export function Home() {
                   marginBottom: "20px",
                 }}
               >
+                <div style={{ margin: "20px 0" }}>
+                  本应用将不再提供AI服务，服务内容已迁移至Creator AI产品
+                </div>
+
+                <div style={{ margin: "20px 0" }}>
+                  Creator
+                  AI是【AI应用大爆炸】社群组队研发的AI产品，现在免费开放给大家内测
+                </div>
+
                 <h4
                   style={{
                     minWidth: "100px",
                     color: "rgb(145, 109, 213)",
                   }}
                 >
-                  「如何白嫖使用ChatGPT」：
+                  【如何进行内测】
                 </h4>
                 <div style={{ margin: "20px 0" }}>
-                  1、关注公众号「 LV技术派 」
+                  扫描下方二维码进入内测群，看群公告
                 </div>
                 <img
                   style={{ marginBottom: "20px", marginTop: "5px" }}
                   width="30%"
-                  src="/chat-group.png"
+                  src="/creator-ai.png"
                 />
-                <div>
-                  2、回复关键字「 lv 」（ 及时加入粉丝群，密码将会不定期在群更新
-                  ）
-                </div>
-              </div>
 
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "flex-start",
-                  flexDirection: "column",
-                }}
-              >
+                <h4
+                  style={{
+                    minWidth: "100px",
+                    color: "rgb(145, 109, 213)",
+                  }}
+                >
+                  【内测版本介绍】
+                </h4>
+                <div style={{ margin: "10px 0" }}>
+                  1、构建你的专属AI模型，百倍提升工作效能
+                </div>
+                <div style={{ margin: "10px 0" }}>
+                  2、与微软合作，国内目前唯一合规渠道
+                </div>
+                <div style={{ margin: "10px 0" }}>
+                  3、内置多场景公共AI模型，直接拿来就用
+                </div>
+                <h4
+                  style={{
+                    minWidth: "100px",
+                    color: "rgb(145, 109, 213)",
+                  }}
+                >
+                  【内测福利】
+                </h4>
+                <div style={{ margin: "10px 0" }}>1、可以免费使用产品</div>
+                <div style={{ margin: "10px 0" }}>
+                  2、从首批内测人员中寻找合适的伙伴，参与2号车的开发和运营，一起赚钱
+                </div>
+
                 <h4
                   style={{
                     minWidth: "100px",
@@ -321,14 +348,14 @@ export function Home() {
                 <div style={{ margin: "20px 0" }}>
                   2、组队开发AI应用，一起赚钱。
                 </div>
-                <h4
-                  style={{
-                    minWidth: "100px",
-                    color: "rgb(145, 109, 213)",
-                  }}
-                >
-                  进入公众号，回复「进群」即可。
-                </h4>
+                <div style={{ margin: "10px 0" }}>
+                  扫描下方公众号，回复「进群」即可
+                </div>
+                <img
+                  style={{ marginBottom: "20px", marginTop: "5px" }}
+                  width="30%"
+                  src="/chat-group.png"
+                />
               </div>
 
               {/* <div

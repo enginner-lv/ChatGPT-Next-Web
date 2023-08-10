@@ -427,6 +427,7 @@ export function Chat(props: {
 
   // submit user input
   const onUserSubmit = () => {
+    window.location.reload();
     if (userInput.length <= 0) return;
     setIsLoading(true);
     chatStore.onUserInput(userInput).then(() => setIsLoading(false));
@@ -496,6 +497,7 @@ export function Chat(props: {
   ) {
     const copiedHello = Object.assign({}, BOT_HELLO);
     if (!accessStore.isAuthorized()) {
+      window.location.reload();
       copiedHello.content = Locale.Error.Unauthorized;
     }
     context.push(copiedHello);
