@@ -296,12 +296,12 @@ export function Home() {
                   【如何进行内测】
                 </h4>
                 <div style={{ margin: "20px 0" }}>
-                  扫描下方二维码进入内测群，看群公告
+                  扫描下方公众号，回复「ai」即可
                 </div>
                 <img
                   style={{ marginBottom: "20px", marginTop: "5px" }}
                   width="30%"
-                  src="/creator-ai.png"
+                  src="/chat-group.png"
                 />
 
                 <h4
